@@ -1,4 +1,4 @@
-<p align="center"><img src="https://image.flaticon.com/icons/svg/919/919837.svg" width="150"><p>
+<p align="center"><img src="https://image.flaticon.com/icons/svg/977/977504.svg" width="150"><p>
 <h1 align="center">awesome-bashrc</h1>
 
 <p align="center">
@@ -22,7 +22,29 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 
 ## Contents
 
-* 
+* C/C++ compile and run
+
+
+#### C/C++ compile and run
+
+```sh
+cpp() {
+    echo "Compilig file..."
+    g++ -o "$1" "$1.cpp"
+    echo "Complied! Enter input:D"
+    ./"$1"
+}
+# cpp filename
+
+c() {
+    echo "Compilig file..."
+    gcc -o "$1" "$1.c"
+    echo "Complied! Enter input:D"
+    ./"$1"
+}
+# c filename
+
+```
 
 ---
 
