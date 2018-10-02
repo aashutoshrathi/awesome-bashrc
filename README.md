@@ -26,7 +26,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 * [C/C++ Compile and Run](#c-cpp)
 * [git diff for JS Devs](#gd-js)
 * [Upload package to PyPi.org](#py-up)
-
+* [apt-get update](#apt-upd)
 
 <a id="c-cpp"></a>
 
@@ -76,6 +76,13 @@ This generates the repsective dist files and uploads them to PyPi.org by asking 
 alias pyup="python setup.py sdist bdist_wheel && twine upload dist/*"
 ```
 
+<a id="apt-upd"></a>
+
+#### apt-get update
+
+```sh
+alias update='sudo apt-get update'
+```
 ---
 
 ## License
