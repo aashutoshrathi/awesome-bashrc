@@ -10,6 +10,7 @@
     <img align="center" src="https://img.shields.io/badge/contributors-needed-yellow.svg">
 </a>
 <p>
+<hr>
 
 🚀 Curated list of awesome bashrc snippets that will make your work easier.
 
@@ -22,8 +23,10 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 
 ## Contents
 
-* C/C++ compile and run
+* [C/C++ Compile and Run](#c-cpp)
 
+
+<a id="c-cpp"></a>
 
 #### C/C++ compile and run
 
@@ -54,6 +57,5 @@ c() {
 
 ---
 
-File Templates taken from: https://github.com/aviaryan/awesome-no-login-web-apps
-
+File Templates taken from [awesome-no-login-web-apps](https://github.com/aviaryan/awesome-no-login-web-apps)
 <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
