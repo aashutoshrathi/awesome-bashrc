@@ -25,6 +25,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 
 * [C/C++ Compile and Run](#c-cpp)
 * [git diff for JS Devs](#gd-js)
+* [Upload package to PyPi.org](#py-up)
 
 
 <a id="c-cpp"></a>
@@ -63,6 +64,16 @@ alias gd="git diff --ignore-all-space
 
 # Write gd to ignore not important differences.
 # Credits: https://www.reddit.com/r/javascript/comments/9i6hl3/alias_for_open_source_js_devs/
+```
+
+<a id="py-up"></a>
+
+#### Upload your package to PyPi.org
+
+This generates the repsective dist files and uploads them to PyPi.org by asking your credentials at the end.
+
+```sh
+alias pyup="python setup.py sdist bdist_wheel && twine upload dist/*"
 ```
 
 ---
