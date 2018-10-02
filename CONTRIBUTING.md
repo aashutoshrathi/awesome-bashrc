@@ -4,6 +4,7 @@ Hey, thanks for considering contributing to this list. We really appreciate it.
 
 Please follow the following guidelines when submitting a PR -
 
+* Always create an issue for a new alias/snippet.
 * Read the introduction in README and make sure your addition(s) are valid for this awesome list.
 * Description about links should give an account of the outstanding features and major short-coming of the item, if any.
 * Description should end with a full-stop.

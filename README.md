@@ -18,7 +18,7 @@
 Working with bash in daily life, it is very irritating writing the same command multiple times.
 To avoid that we write aliases/snippets for bashrc and make our life easier. 
 
-This repository will have collection of such aliases.
+This repository will have collection of such aliases. Read [Contribution Guidelines](CONTRIBUTING.md) before contributing.
 
 ## Contents
 
