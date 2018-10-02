@@ -50,14 +50,19 @@ c() {
 
 ```
 
-<a id="gd-jd"></a>
+<a id="gd-js"></a>
 
 #### git diff for JS Devs
 
 ```sh
-alias gd="git diff --ignore-all-space --ignore-space-at-eol --ignore-space-change --ignore-blank-lines -- . ':(exclude)*package-lock.json'"
+alias gd="git diff --ignore-all-space 
+                    --ignore-space-at-eol 
+                    --ignore-space-change 
+                    --ignore-blank-lines -- . 
+                    ':(exclude)*package-lock.json'"
 
-# Write gd to ignore not important differences
+# Write gd to ignore not important differences.
+# Credits: https://www.reddit.com/r/javascript/comments/9i6hl3/alias_for_open_source_js_devs/
 ```
 
 ---
