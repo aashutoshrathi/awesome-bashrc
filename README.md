@@ -24,6 +24,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 ## Contents
 
 * [C/C++ Compile and Run](#c-cpp)
+* [git diff for JS Devs](#gd-js)
 
 
 <a id="c-cpp"></a>
@@ -47,6 +48,16 @@ c() {
 }
 # c filename
 
+```
+
+<a id="gd-jd"></a>
+
+#### git diff for JS Devs
+
+```sh
+alias gd="git diff --ignore-all-space --ignore-space-at-eol --ignore-space-change --ignore-blank-lines -- . ':(exclude)*package-lock.json'"
+
+# Write gd to ignore not important differences
 ```
 
 ---
