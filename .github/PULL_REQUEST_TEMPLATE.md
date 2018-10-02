@@ -2,6 +2,8 @@
 
 **[Explain what this app is about and why it should be included here.]**
 
+Fixes #{IssueNumber}
+<!-- Eg: Fixes #2 -->
 
 ## By submitting this pull request I confirm I've read and complied with the below requirements.
 
