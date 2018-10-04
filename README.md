@@ -90,7 +90,7 @@ alias update='sudo apt-get update'
 
 #### git branch
 
-This will show the current git branch of any repository you're in.
+This will display the current git branch of any repository you're in.
 
 ```sh
 # Add git branch if its present to PS1
@@ -98,7 +98,7 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-# Pass the function to the color parser of the terminal to display branch in colors
+# Pass the function to the color parser of the terminal to colorize the branch name.
 if [ "$color_prompt" = yes ]; then
     if [[ ${EUID} == 0 ]] ; then
         PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W $(parse_git_branch)\$\[\033[00m\] '
