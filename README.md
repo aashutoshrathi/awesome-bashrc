@@ -112,7 +112,7 @@ fi
 unset color_prompt force_color_prompt
 ```
 
-<a id="apt-io"></a>
+<a id="git-io"></a>
 
 #### git.io alias
 
