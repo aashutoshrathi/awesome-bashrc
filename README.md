@@ -36,21 +36,21 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 #### C/C++ compile and run
 
 ```sh
-cpp() {
+cpp-run() {
     echo "Compilig file..."
     g++ -o "$1" "$1.cpp"
     echo "Complied! Enter input:D"
     ./"$1"
 }
-# cpp filename
+# cpp-run filename
 
-c() {
+c-run() {
     echo "Compilig file..."
     gcc -o "$1" "$1.c"
     echo "Complied! Enter input:D"
     ./"$1"
 }
-# c filename
+# c-run filename
 
 ```
 
