@@ -28,6 +28,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 * [Upload package to PyPi.org](#py-up)
 * [apt-get update](#apt-upd)
 * [git branch](#git-branch)
+* [git.io](#git-io)
 
 
 <a id="c-cpp"></a>
@@ -110,6 +111,23 @@ else
 fi
 unset color_prompt force_color_prompt
 ```
+
+<a id="git-io"></a>
+
+#### git.io alias
+
+Get shortened git.io URLs from a single command
+```sh
+gurl() {
+    curl -i https://git.io -F "url=$1" \
+    -F "code=$2"
+}
+
+# Usage
+# gurl https://github.com/anshumanv anshumanv
+```
+After these steps, https://git.io/anshumanv will redirect you to https://github.com/anshumanv
+
 ---
 
 ## License
