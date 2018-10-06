@@ -1,6 +1,6 @@
 <!-- Please fill in the **bold** fields, submit the pull request and tick the checkboxes. DO NOT SUBMIT ANYTHING IF YOU FAIL ANY OF THIS RULES -->
 
-**[Explain what this app is about and why it should be included here.]**
+**[Explain what this alias/snippet is about and why it should be included here.]**
 
 Fixes #{IssueNumber}
 <!-- Eg: Fixes #2 -->
