@@ -37,17 +37,17 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 
 ```sh
 cpp-run() {
-    echo "Compilig file..."
+    echo "Compiling file..."
     g++ -o "$1" "$1.cpp"
-    echo "Complied! Enter input:D"
+    echo "Compiled! Enter input :D"
     ./"$1"
 }
 # cpp-run filename
 
 c-run() {
-    echo "Compilig file..."
+    echo "Compiling file..."
     gcc -o "$1" "$1.c"
-    echo "Complied! Enter input:D"
+    echo "Compiled! Enter input :D"
     ./"$1"
 }
 # c-run filename
@@ -73,7 +73,7 @@ alias gd="git diff --ignore-all-space
 
 #### Upload your package to PyPi.org
 
-This generates the repsective dist files and uploads them to PyPi.org by asking your credentials at the end.
+This generates the respective dist files and uploads them to PyPi.org by asking your credentials at the end.
 
 ```sh
 alias pyup="python setup.py sdist bdist_wheel && twine upload dist/*"
