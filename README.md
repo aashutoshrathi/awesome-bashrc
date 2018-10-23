@@ -29,6 +29,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 * [apt-get update](#apt-upd)
 * [git branch](#git-branch)
 * [git.io](#git-io)
+* [Fast upwards navigation](#fastupwardsnavigation)
 
 
 <a id="c-cpp"></a>
@@ -127,6 +128,17 @@ gurl() {
 # gurl https://github.com/anshumanv anshumanv
 ```
 After these steps, https://git.io/anshumanv will redirect you to https://github.com/anshumanv
+
+<a id="fastupwardsnavigation"></a>
+#### Fast upwards navigation
+
+```
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+```
+
 
 ---
 
