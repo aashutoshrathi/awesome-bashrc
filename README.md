@@ -132,7 +132,7 @@ After these steps, https://git.io/anshumanv will redirect you to https://github.
 <a id="fastupwardsnavigation"></a>
 #### Fast upwards navigation
 
-```
+```sh
 alias ..='cd ..'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
