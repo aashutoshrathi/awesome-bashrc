@@ -30,7 +30,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 * [git branch](#git-branch)
 * [git.io](#git-io)
 * [Fast upwards navigation](#fastupwardsnavigation)
-
+* [Download music from youtube video](#youtube-mp3)
 
 <a id="c-cpp"></a>
 
@@ -137,6 +137,14 @@ alias ..='cd ..'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias .....='cd ../../../../'
+```
+<a id="youtube-mp3"></a>
+#### Download music from youtube video
+You will need mp3-lame library and youtube-dl utility.
+```sh
+alias youtube-mp3="youtube-dl --extract-audio --audio-format mp3"
+# Usage
+# youtube-mp3 https://youtube.com/{id}
 ```
 ---
 
