@@ -24,15 +24,15 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 ## Contents
 
 - [Contents](#contents)
-        - [C/C++ compile and run](#cc-compile-and-run)
-        - [git diff for JS Devs](#git-diff-for-js-devs)
-        - [Upload your package to PyPi.org](#upload-your-package-to-pypiorg)
-        - [apt-get update](#apt-get-update)
-        - [git branch](#git-branch)
-        - [git.io alias](#gitio-alias)
-        - [Fast upwards navigation](#fast-upwards-navigation)
-        - [Download music from youtube video](#download-music-from-youtube-video)
-        - [Get saved WiFi keys](#get-saved-wifi-keys)
+  - [C/C++ compile and run](#cc-compile-and-run)
+  - [git diff for JS Devs](#git-diff-for-js-devs)
+  - [Upload your package to PyPi.org](#upload-your-package-to-pypiorg)
+  - [apt-get update](#apt-get-update)
+  - [git branch](#git-branch)
+  - [git.io alias](#gitio-alias)
+  - [Fast upwards navigation](#fast-upwards-navigation)
+  - [Download music from youtube video](#download-music-from-youtube-video)
+  - [Get saved WiFi keys](#password-wifi)
 - [License](#license)
 
 <a id="c-cpp"></a>
