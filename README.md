@@ -23,14 +23,17 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 
 ## Contents
 
-* [C/C++ Compile and Run](#c-cpp)
-* [git diff for JS Devs](#gd-js)
-* [Upload package to PyPi.org](#py-up)
-* [apt-get update](#apt-upd)
-* [git branch](#git-branch)
-* [git.io](#git-io)
-* [Fast upwards navigation](#fastupwardsnavigation)
-* [Download music from youtube video](#youtube-mp3)
+- [Contents](#contents)
+        - [C/C++ compile and run](#cc-compile-and-run)
+        - [git diff for JS Devs](#git-diff-for-js-devs)
+        - [Upload your package to PyPi.org](#upload-your-package-to-pypiorg)
+        - [apt-get update](#apt-get-update)
+        - [git branch](#git-branch)
+        - [git.io alias](#gitio-alias)
+        - [Fast upwards navigation](#fast-upwards-navigation)
+        - [Download music from youtube video](#download-music-from-youtube-video)
+        - [Get saved WiFi keys](#get-saved-wifi-keys)
+- [License](#license)
 
 <a id="c-cpp"></a>
 
@@ -118,6 +121,7 @@ unset color_prompt force_color_prompt
 #### git.io alias
 
 Get shortened git.io URLs from a single command
+
 ```sh
 gurl() {
     curl -i https://git.io -F "url=$1" \
@@ -127,9 +131,12 @@ gurl() {
 # Usage
 # gurl https://github.com/anshumanv anshumanv
 ```
+
 After these steps, https://git.io/anshumanv will redirect you to https://github.com/anshumanv
 
+
 <a id="fastupwardsnavigation"></a>
+
 #### Fast upwards navigation
 
 ```sh
@@ -138,14 +145,28 @@ alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias .....='cd ../../../../'
 ```
+
 <a id="youtube-mp3"></a>
+
 #### Download music from youtube video
+
 You will need mp3-lame library and youtube-dl utility.
 ```sh
 alias youtube-mp3="youtube-dl --extract-audio --audio-format mp3"
 # Usage
 # youtube-mp3 https://youtube.com/{id}
 ```
+
+<a id="password-wifi"></a>
+
+#### Get saved WiFi keys
+
+```sh
+alias wifikey="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
+# Usage (requires sudo)
+# wifikey
+```
+
 ---
 
 ## License
