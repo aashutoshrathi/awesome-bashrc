@@ -24,15 +24,15 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 ## Contents
 
 - [Contents](#contents)
-  - [C/C++ compile and run](#cc-compile-and-run)
-  - [git diff for JS Devs](#git-diff-for-js-devs)
-  - [Upload your package to PyPi.org](#upload-your-package-to-pypiorg)
-  - [apt-get update](#apt-get-update)
-  - [git branch](#git-branch)
-  - [git.io alias](#gitio-alias)
-  - [Fast upwards navigation](#fast-upwards-navigation)
-  - [Download music from youtube video](#download-music-from-youtube-video)
-  - [Get saved WiFi keys](#password-wifi)
+    - [C/C++ compile and run](#cc-compile-and-run)
+    - [git diff for JS Devs](#git-diff-for-js-devs)
+    - [Upload your package to PyPi.org](#upload-your-package-to-pypiorg)
+    - [apt-get update](#apt-get-update)
+    - [git branch](#git-branch)
+    - [git.io alias](#gitio-alias)
+    - [Fast upwards navigation](#fast-upwards-navigation)
+    - [Download music from youtube video](#download-music-from-youtube-video)
+    - [Get saved WiFi keys](#get-saved-wifi-keys)
 - [License](#license)
 
 <a id="c-cpp"></a>
@@ -134,7 +134,6 @@ gurl() {
 
 After these steps, https://git.io/anshumanv will redirect you to https://github.com/anshumanv
 
-
 <a id="fastupwardsnavigation"></a>
 
 #### Fast upwards navigation
@@ -151,6 +150,7 @@ alias .....='cd ../../../../'
 #### Download music from youtube video
 
 You will need mp3-lame library and youtube-dl utility.
+
 ```sh
 alias youtube-mp3="youtube-dl --extract-audio --audio-format mp3"
 # Usage
