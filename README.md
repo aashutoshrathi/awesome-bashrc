@@ -168,7 +168,7 @@ alias wifikey="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
 # wifikey
 ```
 
-<a id="screenshot-adb"></a>
+<a id="take-screenshot-of-connected-adb-device"></a>
 
 #### Take Screenshot of connected ADB Device
 
