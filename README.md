@@ -33,6 +33,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
     - [Fast upwards navigation](#fast-upwards-navigation)
     - [Download music from youtube video](#download-music-from-youtube-video)
     - [Get saved WiFi keys](#get-saved-wifi-keys)
+    - [Take Screenshot of connected ADB Device](#take-screenshot-of-connected-adb-device)
 - [License](#license)
 
 <a id="c-cpp"></a>
@@ -165,6 +166,19 @@ alias youtube-mp3="youtube-dl --extract-audio --audio-format mp3"
 alias wifikey="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
 # Usage (requires sudo)
 # wifikey
+```
+
+<a id="screenshot-adb"></a>
+
+#### Take Screenshot of connected ADB Device
+
+```sh
+alias cap="adb shell screencap -p /sdcard/screen.png && \
+           adb pull /sdcard/screen.png && \
+           adb shell rm /sdcard/screen.png"
+# Usage (requires connected device)
+# Saves the screenshot with name screen.png
+# cap
 ```
 
 ---
