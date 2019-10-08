@@ -74,6 +74,15 @@ alias gd="git diff --ignore-all-space
 # Credits: https://www.reddit.com/r/javascript/comments/9i6hl3/alias_for_open_source_js_devs/
 ```
 
+<a id="s></a>
+
+#### git status 
+```sh
+alias s="git status"
+
+```
+
+
 <a id="py-up"></a>
 
 #### Upload your package to PyPi.org
