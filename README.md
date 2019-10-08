@@ -28,6 +28,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
     - [git diff for JS Devs](#git-diff-for-js-devs)
     - [Upload your package to PyPi.org](#upload-your-package-to-pypiorg)
     - [apt-get update](#apt-get-update)
+    - [ll](#ll)
     - [git branch](#git-branch)
     - [git.io alias](#gitio-alias)
     - [Fast upwards navigation](#fast-upwards-navigation)
@@ -90,6 +91,15 @@ alias pyup="python setup.py sdist bdist_wheel && twine upload dist/*"
 
 ```sh
 alias update='sudo apt-get update'
+```
+
+<a id="ll"></a>
+
+#### ll
+
+
+```sh
+alias ll='ls -laht'
 ```
 
 <a id="git-branch"></a>
