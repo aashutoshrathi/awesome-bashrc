@@ -75,7 +75,7 @@ alias gd="git diff --ignore-all-space
 # Credits: https://www.reddit.com/r/javascript/comments/9i6hl3/alias_for_open_source_js_devs/
 ```
 
-<a id="s></a>
+<a id="git-status"></a>
 
 #### git status
 
