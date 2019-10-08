@@ -25,6 +25,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 
 - [Contents](#contents)
     - [C/C++ compile and run](#cc-compile-and-run)
+    - [git_status alias](#git-status)
     - [git diff for JS Devs](#git-diff-for-js-devs)
     - [Upload your package to PyPi.org](#upload-your-package-to-pypiorg)
     - [apt-get update](#apt-get-update)
