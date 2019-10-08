@@ -76,12 +76,12 @@ alias gd="git diff --ignore-all-space
 
 <a id="s></a>
 
-#### git status 
+#### git status
+
 ```sh
 alias s="git status"
 
 ```
-
 
 <a id="py-up"></a>
 
