@@ -92,6 +92,15 @@ alias pyup="python setup.py sdist bdist_wheel && twine upload dist/*"
 alias update='sudo apt-get update'
 ```
 
+<a id="ll"></a>
+
+#### ll
+
+
+```sh
+alias ll='ls -laht'
+```
+
 <a id="git-branch"></a>
 
 #### git branch
