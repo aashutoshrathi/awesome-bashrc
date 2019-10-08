@@ -30,6 +30,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
     - [apt-get update](#apt-get-update)
     - [git branch](#git-branch)
     - [git.io alias](#gitio-alias)
+    - [tree alias](#tree-alias)
     - [Fast upwards navigation](#fast-upwards-navigation)
     - [Download music from youtube video](#download-music-from-youtube-video)
     - [Get saved WiFi keys](#get-saved-wifi-keys)
@@ -134,6 +135,16 @@ gurl() {
 ```
 
 After these steps, https://git.io/anshumanv will redirect you to https://github.com/anshumanv
+
+<a id="tree-alias"></a>
+
+#### tree alias
+
+Get representation of underlying files and folders as a tree.
+
+```sh
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+```
 
 <a id="fastupwardsnavigation"></a>
 
