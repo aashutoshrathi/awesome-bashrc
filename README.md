@@ -25,6 +25,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 
 - [Contents](#contents)
     - [C/C++ compile and run](#cc-compile-and-run)
+    - [git_status alias](#git-status)
     - [git diff for JS Devs](#git-diff-for-js-devs)
     - [Upload your package to PyPi.org](#upload-your-package-to-pypiorg)
     - [apt-get update](#apt-get-update)
@@ -74,6 +75,15 @@ alias gd="git diff --ignore-all-space
 
 # Write gd to ignore not important differences.
 # Credits: https://www.reddit.com/r/javascript/comments/9i6hl3/alias_for_open_source_js_devs/
+```
+
+<a id="git-status"></a>
+
+#### git status
+
+```sh
+alias s="git status"
+
 ```
 
 <a id="py-up"></a>
