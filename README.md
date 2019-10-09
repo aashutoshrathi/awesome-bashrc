@@ -29,6 +29,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
     - [git diff for JS Devs](#git-diff-for-js-devs)
     - [Upload your package to PyPi.org](#upload-your-package-to-pypiorg)
     - [apt-get update](#apt-get-update)
+    - [open](#open)
     - [ll](#ll)
     - [git branch](#git-branch)
     - [git.io alias](#gitio-alias)
@@ -102,6 +103,15 @@ alias pyup="python setup.py sdist bdist_wheel && twine upload dist/*"
 
 ```sh
 alias update='sudo apt-get update'
+```
+<a id="open"></a>
+
+#### open
+
+Open any file using its default program (eg. pdfs, torrents, etc).
+
+```sh
+alias open="xdg-open"
 ```
 
 <a id="ll"></a>
