@@ -25,12 +25,14 @@ This repository will have collection of such aliases. Read [Contribution Guideli
 
 - [Contents](#contents)
     - [C/C++ compile and run](#cc-compile-and-run)
-    - [git_status alias](#git-status)
     - [git diff for JS Devs](#git-diff-for-js-devs)
+    - [git status](#git-status)
     - [Upload your package to PyPi.org](#upload-your-package-to-pypiorg)
     - [apt-get update](#apt-get-update)
     - [open](#open)
-    - [ll](#ll)
+    - [List files](#list-files)
+    - [Check free space on disks](#check-free-space-on-disks)
+    - [Safe operations with files](#safe-operations-with-files)
     - [git branch](#git-branch)
     - [git.io alias](#gitio-alias)
     - [tree alias](#tree-alias)
@@ -114,13 +116,30 @@ Open any file using its default program (eg. pdfs, torrents, etc).
 alias open="xdg-open"
 ```
 
-<a id="ll"></a>
+<a id="list-files"></a>
 
-#### ll
+#### List files
 
 
 ```sh
 alias ll='ls -laht'
+alias l='ls -aC'
+```
+
+<a id="check-free-space-on-disks"></a>
+
+#### Check free space on disks
+```sh
+alias df='df -h'
+```
+
+<a id="safe-operations-with-files"></a>
+
+#### Safe operations with files
+```sh
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 ```
 
 <a id="git-branch"></a>
