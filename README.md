@@ -17,7 +17,7 @@
 #### Inspiration
 
 Working with bash in daily life, it is very irritating writing the same command multiple times.
-To avoid that we write aliases/snippets for bashrc and make our life easier. 
+To avoid that we write aliases/snippets for bashrc and make our life easier.
 
 This repository will have collection of such aliases. Read [Contribution Guidelines](CONTRIBUTING.md) before contributing.
 
@@ -36,10 +36,11 @@ This repository will have collection of such aliases. Read [Contribution Guideli
     - [git branch](#git-branch)
     - [git.io alias](#gitio-alias)
     - [tree alias](#tree-alias)
-    - [Fast upwards navigation](#fast-upwards-navigation)
+    - [Fast upwards navigation (comes with ZSH)](#fast-upwards-navigation-comes-with-zsh)
     - [Download music from youtube video](#download-music-from-youtube-video)
     - [Get saved WiFi keys](#get-saved-wifi-keys)
     - [Take Screenshot of connected ADB Device](#take-screenshot-of-connected-adb-device)
+    - [Bootstrap your CF Round](#bootstrap-your-cf-round)
 - [License](#license)
 
 <a id="c-cpp"></a>
@@ -197,7 +198,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 <a id="fastupwardsnavigation"></a>
 
-#### Fast upwards navigation
+#### Fast upwards navigation (comes with ZSH)
 
 ```sh
 alias ..='cd ..'
@@ -239,6 +240,24 @@ alias cap="adb shell screencap -p /sdcard/screen.png && \
 # Usage (requires connected device)
 # Saves the screenshot with name screen.png
 # cap
+```
+
+<a id="cf-round"></a>
+
+#### Bootstrap your CF Round
+
+```sh
+cf() {
+    mkdir "CF#$1" &&\
+    cd "CF#$1" &&\
+    touch inp.txt &&\
+    touch out.txt && \
+    curl -L "https://files.aashutosh.dev/cpp.cpp" -o A.cpp
+}
+
+# Usage: cf 549
+# The above command initialzes, Your CF Round folder and downloads your sample template.
+# https://files.aashutosh.dev/cpp.cpp refers to link of your template
 ```
 
 ---
