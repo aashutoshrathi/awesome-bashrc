@@ -41,6 +41,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
     - [Get saved WiFi keys](#get-saved-wifi-keys)
     - [Take Screenshot of connected ADB Device](#take-screenshot-of-connected-adb-device)
     - [Bootstrap your CF Round](#bootstrap-your-cf-round)
+    - [Run Matlab scripts](#run-matlab-scripts)
 - [License](#license)
 
 <a id="c-cpp"></a>
@@ -258,6 +259,17 @@ cf() {
 # Usage: cf 549
 # The above command initialzes, Your CF Round folder and downloads your sample template.
 # https://files.aashutosh.dev/cpp.cpp refers to link of your template
+```
+
+<a id="matlab"></a>
+
+#### Run Matlab scripts
+
+```sh
+matlab-run() {
+    matlab -nodesktop -nosplash -r "$1"
+}
+# matlab-run filename
 ```
 
 ---
