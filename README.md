@@ -261,7 +261,7 @@ cf() {
 # https://files.aashutosh.dev/cpp.cpp refers to link of your template
 ```
 
-<a id="matlab"></a>
+<a id="run-matlab-scripts"></a>
 
 #### Run Matlab scripts
 
