@@ -42,6 +42,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
     - [Take Screenshot of connected ADB Device](#take-screenshot-of-connected-adb-device)
     - [Bootstrap your CF Round](#bootstrap-your-cf-round)
     - [Run Matlab scripts](#run-matlab-scripts)
+    - [Convert GIF to WebM](#convert-gif-to-webm)
 - [License](#license)
 
 <a id="c-cpp"></a>
@@ -270,6 +271,20 @@ matlab-run() {
     matlab -nodesktop -nosplash -r "$1"
 }
 # matlab-run filename
+```
+
+<a id="gif2webm"></a>
+
+#### Convert GIF to WebM
+
+Why?
+=> Read [this](https://bit.ly/gif-mp4) (You can save upto 90% on size of media)
+
+```sh
+gif2webm() {
+    ffmpeg -i $1.gif -c vp9 -b:v 0 -crf 41 $1.webm
+}
+# gif2webm gif-name-without-format
 ```
 
 ---
