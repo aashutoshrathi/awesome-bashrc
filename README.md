@@ -31,6 +31,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
     - [apt-get update](#apt-get-update)
     - [open](#open)
     - [List files](#list-files)
+    - [Tally](#tally)
     - [Check free space on disks](#check-free-space-on-disks)
     - [Safe operations with files](#safe-operations-with-files)
     - [git branch](#git-branch)
@@ -128,6 +129,17 @@ alias open="xdg-open"
 alias ll='ls -laht'
 alias l='ls -aC'
 ```
+
+<a id="tally"></a>
+
+#### Tally
+
+```sh
+tally() {
+  sort | uniq -c | sort -n
+}
+```
+
 
 <a id="check-free-space-on-disks"></a>
 
