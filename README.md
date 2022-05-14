@@ -136,6 +136,11 @@ alias l='ls -aC'
 
 ```sh
 tally() {
+  if [[ $1 == '--help' ]]; then
+    echo "Usage: ls | tally";
+    return 0;
+  fi
+  
   sort | uniq -c | sort -n
 }
 ```
