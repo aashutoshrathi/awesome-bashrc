@@ -45,6 +45,10 @@ This repository will have collection of such aliases. Read [Contribution Guideli
     - [Run Matlab scripts](#run-matlab-scripts)
     - [Convert GIF to WebM](#convert-gif-to-webm)
     - [Python virtualenv / Anaconda](#python)
+        - [Python](#python)
+        - [Python virtualenv](#python-virtual-environments)     
+        - [Anaconda](#anaconda-python)   
+             
 - [License](#license)
 
 <a id="c-cpp"></a>
