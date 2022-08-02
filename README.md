@@ -317,7 +317,6 @@ For example:
 
 
 First defining a custom print function to pretty print alias output. This will help us distinguish between command output and alias output
-
 ```bash 
 
 function repeat {
@@ -338,6 +337,7 @@ function print {
 }
 
 ```
+**NOTE**: If you are not interested in using these helper functions, you can replace `print` with `echo` in all the below code snippets. 
 
 ###### Aliases specific to python: 
 ```bash 
