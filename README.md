@@ -44,6 +44,7 @@ This repository will have collection of such aliases. Read [Contribution Guideli
     - [Bootstrap your CF Round](#bootstrap-your-cf-round)
     - [Run Matlab scripts](#run-matlab-scripts)
     - [Convert GIF to WebM](#convert-gif-to-webm)
+    - [Python virtualenv / Anaconda](#python)
 - [License](#license)
 
 <a id="c-cpp"></a>
