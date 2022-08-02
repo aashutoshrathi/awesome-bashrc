@@ -305,6 +305,263 @@ gif2webm() {
 ```
 
 ---
+#### Python 
+
+Framework used for coming up with aliases for Python: 
+
+* To create / make a directory, `mkdir` is used and to remove a directory `rmdir` is used. Extending this logic of using `mk` and `rm` for aliases.
+
+For example: 
+1) `pirm` : pip remove a package 
+2) `mkvenv` : To create / make a virtual environment
+
+
+First defining a custom print function to pretty print alias output. This will help us distinguish between command output and alias output
+
+```bash 
+
+function repeat {
+    num="${2:-100}"; printf -- "$1%.0s" $(seq 1 $num);
+}
+
+# custom print function for pretty printing aliases/ functions
+function print {
+    terminalCols=$(tput cols)
+    argLen=${#1}
+    offset=$(((terminalCols-argLen)/2))
+
+    printf "\n"
+    repeat '#' $((offset-1))
+    printf " $1 "
+    repeat '#' $((offset-1))
+    printf "\n"     
+}
+
+```
+
+###### Aliases specific to python: 
+```bash 
+alias 'py'='python'
+alias 'pirm'='pip uninstall -y'
+alias 'sdist'='rm -rf dist/ ; py setup.py sdist'
+alias 'bdist'='rm -rf dist/ ; py setup.py bdist_wheel'
+
+# Pip install 
+function pi {
+    if [ -z "$1" ]
+    then 
+        # Looks for setup.py in the current directory and installs the package
+        print "Installing from local setup.py file in the current directory"
+        pip install .
+    else 
+        # Installs the package from PyPI 
+        print "Fetching from PyPI"
+        pip install "$1"
+    fi
+}
+
+alias 'pii'='pi'
+```
+
+##### Python virtual environments 
+
+###### To create a python virtual environment in the current directory:
+
+```bash 
+# Create new venv using python3
+# If no name is passed will default to .venv
+function mkvenv {
+    if [ -z "$1" ]
+    then
+        print "Creating virtualenv: .venv"
+        python3 -m venv .venv
+        avenv
+    else
+        print "Creating virtualenv: $1"
+        python3 -m venv "$1"
+        avenv "$1"
+    fi
+
+    print "Upgrading pip"
+    pip install pip --upgrade
+
+    print "Installing wheel package"
+    pip install wheel
+    print "Activated virtualenv"
+}
+
+alias 'mkenv'='mkvenv'
+
+```
+###### To remove a python virtual environment in the current directory
+
+```bash 
+# Remove a virtual env.
+# If no name is passed will default to .venv
+function rmvenv {
+    if [ -z "$1" ]
+    then
+        print "Removing virtualenv: .venv"
+        python3 -m venv .venv
+        rm -rf .venv
+    else
+        print "Removing virtualenv: $1"
+        rm -rf "$1"
+    fi
+}
+
+alias 'rmenv'='rmvenv'
+```
+
+###### To activate a virtual environment in the current directory.
+
+Going by the general assumption that python virtual environments are named as: 
+* .venv : Local virtual environemnt
+* .venv37 : Local virtual environment with Python 3.7
+* .venv38 : Local virtual environment with Python 3.8
+
+
+The below alias uses `fzf` to choose a virtual environment to activate when there are multiple virtual environments in the 
+current directory.
+
+```bash
+
+# Activate virtual env
+# If no name is passed will default to .venv
+function avenv {
+    # If no paramerter is passed try to activate .venv first. If .venv doesnt exist try with the next closest one. If both .venv37 and .venv38 exist. It will pick .venv37
+    # If parameter is passed, try to activate that one
+    if [ -z "$1" ]
+    then
+
+        if [ -d ".venv" ] 
+        then
+            source .venv/bin/activate 
+            print "Activated virtualenv: .venv" 
+
+        else   
+            # Piping the output of find command to fzf to select a virtual env.
+            virtual_env=$(find -maxdepth 2  -type d -name ".venv*"  | fzf)  
+            print "Activated virtualenv: $virtual_env" 
+            source "$virtual_env"/bin/activate
+        fi 
+
+    else
+         source "$1"/bin/activate; print "Activated virtualenv: $1" || print "Failed to activate virtualenv: $1"
+
+    fi
+}
+
+alias 'aenv'='avenv'
+```
+###### To deactivate a virtual environment
+```bash
+
+# Deactivate virtual env
+
+function dvenv {
+
+    if [ -z "$1" ]
+    then
+        deactivate || print "Failed to deactivate virtualenv: .venv"
+        print "Deactivated virtualenv"
+    else
+        deactivate "$1" || print "Failed to deactivate virtualenv: $1"
+        print "Deactivated virtualenv" 
+    fi
+}
+alias 'denv'='dvenv'
+
+```
+
+##### Anaconda Python 
+
+Utilizes the `mamba` executable wherever possible to improve anaconda command execution times. 
+
+Follows a similar style of aliases as the above set of python aliases. 
+
+Only difference is, aliases are prefixed with `c`.
+
+```bash
+#  MAMBA: Currently, only install, create, list, search, run, info and clean are supported through mamba.
+
+#list envs
+alias 'clsenv'='mamba env list'
+alias 'clsvenv'='clsenv'
+```
+
+###### To create a conda environment
+```bash 
+#create new venv
+function cmkvenv {
+   mkdir -p /usr/softwares/miniconda3/envs/"$1"
+#  mamba create -n "$1" --prefix=/usr/softwares/miniconda3/envs/"$1" python="$2" -y
+  conda create  --prefix=/usr/softwares/miniconda3/envs/"$1" python="$2" -y
+}
+alias 'cmkenv'='cmkvenv'
+```
+
+###### To remove a conda environment
+```bash 
+# remove arbitrary number of conda virtual envs
+function crmenv {
+  mamba env remove -n "$@"
+}
+
+alias 'crmvenv'='crmenv'
+```
+
+###### To activate/ deactivate a conda environment
+```bash
+#activate venv.
+#Can't use mamba for activation and deactivation of env
+function caenv {
+  conda activate "$1"
+}
+
+#deactivate venv
+alias "cdvenv"="conda deactivate"
+alias "cdenv"="cdvenv"
+```
+###### To add/remove and list conda channel(s)
+```bash
+#add channels in conda
+function caddc {
+    if [ -z "$1" ]
+    then
+        echo "Provide a channel name to add!"
+        #exit 1;
+    else
+        mamba config --add channels "$1"
+    fi
+}
+
+#list channels in conda
+function clsch {
+  conda config --show channels
+}
+
+# remove a channel
+function crmch {
+    conda config --remove channels "$1"
+}
+```
+
+###### To install / remove a conda package 
+```bash
+#Conda install a package
+function ci {
+    if [ -z "$2" ]
+    then
+        /usr/softwares/miniconda3/condabin/mamba install -y "$1"
+    else
+         /usr/softwares/miniconda3/condabin/mamba install -c "$2" "$1"
+    fi
+}
+
+#Conda remove a package
+alias 'crm'='mamba uninstall -y'
+```
 
 ## License
 
