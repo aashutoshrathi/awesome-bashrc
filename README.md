@@ -1,4 +1,4 @@
-<p align="center"><img src="https://image.flaticon.com/icons/svg/977/977504.svg" width="150"><p>
+<p align="center"><img src="https://s3.ap-south-1.amazonaws.com/shared.aashutosh.dev/awesome-bashrc.svg" width="150"><p>
 <h1 align="center">awesome-bashrc</h1>
 
 <p align="center">
