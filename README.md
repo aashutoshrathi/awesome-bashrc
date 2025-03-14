@@ -46,8 +46,9 @@ This repository will have collection of such aliases. Read [Contribution Guideli
     - [Convert GIF to WebM](#convert-gif-to-webm)
     - [Python virtualenv / Anaconda](#python)
         - [Python](#python)
-        - [Python virtualenv](#python-virtual-environments)     
-        - [Anaconda](#anaconda-python)   
+  - [Python virtualenv](#python-virtual-environments)
+  - [Anaconda](#anaconda-python)
+  - [Faster VSCode CLI Binding](#vscode-cli-binding)
              
 - [License](#license)
 
@@ -566,6 +567,15 @@ function ci {
 
 #Conda remove a package
 alias 'crm'='mamba uninstall -y'
+```
+
+#### VSCode CLI Binding
+
+```bash
+# MacOS only
+alias c="open $1 -a 'Visual Studio Code'"
+# above can be used as equivalent to `code` in MacOS, apprantly it's faster.
+# Source: https://x.com/theo/status/1898973452050280932
 ```
 
 ## License
